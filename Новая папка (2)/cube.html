@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Rubik's Cube</title>
+<script type="text/javascript" src="cube.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css"/>
+<script>
+let cube;
+
+function setSize(n)
+{
+	cube.setParam({size: n});
+}
+
+function shuffle(animation)
+{
+	cube.shuffle(50,animation);
+}
+
+function reset()
+{
+	cube.reset();
+}
+
+function setShiny(n)
+{
+	cube.setParam({shiny: n});
+}
+
+function undo()
+{
+	cube.undo();
+}
+
+function start()
+{
+cube = new RubikCube(document.getElementById("canvas"), {size: 5});
+}
+</script>
+</head>
+<body onload="start()">
+<h2>Rubik's cube</h2>
+<div id="size">
+	<span onclick="setSize(2);return false">2x2</span>
+	<span onclick="setSize(3);return false">3x3</span>
+	<span onclick="setSize(4);return false">4x4</span>
+	<span onclick="setSize(5);return false">5x5</span>
+	<span onclick="setSize(6);return false">6x6</span>
+	<span onclick="setSize(7);return false">7x7</span> 
+</div>
+
+<div id="size">
+	<span onclick="setShiny(0);return false">Flat</span>
+	<span onclick="setShiny(0.25);return false">Shiny</span>
+</div>
+
+<div id="size">
+	<span onclick="shuffle(0);return false">Shuffle (fast)</span>
+	<span onclick="undo();return false">Undo</span><br>
+</div>
+
+<div id="debug"></div>
+<canvas width="800" height="600" id="canvas"></canvas>
+
+<a>Hold 'Shift' key or right mouse button to rotate whole cube</a>
+
+</body>
+</html>

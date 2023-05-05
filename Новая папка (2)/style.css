@@ -1,0 +1,38 @@
+#size {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+span {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #14A76C;
+    cursor: pointer;
+}
+
+
+a {
+    display: flex;
+    font-size: 23px;
+    margin-top: 25px;
+    color: #FF652F;
+    margin-left: 35px;
+}
+
+#canvas {
+    margin-left: 30%;
+    margin-top: 2%;
+}
+
+html {
+    background-color: #272727;
+}
+
+h2 {
+    margin-left: 35px;
+    color: #FFE400;
+    margin-bottom: 45px;
+}
+
